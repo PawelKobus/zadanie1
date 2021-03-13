@@ -33,7 +33,7 @@ public class Animal {
             System.out.println("too late:)");
         } else {
             this.weight += 1;
-            System.out.println("thx for food");
+            System.out.println("thx for food: " + this.weight);
         }
     }
 
@@ -42,7 +42,7 @@ public class Animal {
             System.out.println("too late:)");
         } else {
             this.weight -= 1.0;
-            System.out.println("thx for walk");
+            System.out.println("thx for a walk: " + this.weight);
         }
     }
 }
