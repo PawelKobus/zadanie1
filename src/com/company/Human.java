@@ -10,7 +10,7 @@ public class Human {
 
     Phone mobilePhone;
     Animal pet;
-    Car audi;
+    private Car car;
 
     private Double salary;
 
@@ -32,8 +32,22 @@ public class Human {
             System.out.println("odebrać aneks do umowy od pani Hani z kadr");
             System.out.println("ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu");
         }
-
     }
+    public Car getCar(){
+        return car;
+    }
+    public void setCar(Car car){
+        if(car.getValue() < this.salary){
+            System.out.println("udało się kupić za gotówkę iprzypisujemy samochód");
+        }
+        else if((car.getValue()/12) < this.salary){
+            System.out.println("udało się kupić na kredyt (no trudno) iprzypisujemy samochód");
+        }
+        else{
+            System.out.println("zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
+        }
+    }
+
 
 
 }
