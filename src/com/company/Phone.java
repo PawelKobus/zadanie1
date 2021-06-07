@@ -16,4 +16,7 @@ public class Phone {
     String getOSVersion(){
         return "4.23.1";
     }
+    public String toString(){//overriding the toString() method
+        return producer+" "+model+" "+operationSystem+" "+screenSize;
+    }
 }
