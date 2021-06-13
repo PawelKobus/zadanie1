@@ -10,10 +10,15 @@ public class Human {
     String lastName;
     Integer Age;
     String sex;
-
-    Phone mobilePhone;
+    public Phone phone;
+    Animal animal;
     Animal pet;
-    private Car car;
+    public Double cash;
+    Human seller;
+    Human buyer;
+
+
+    public Car car;
 
     private Double salary;
 
@@ -42,15 +47,28 @@ public class Human {
     public void setCar(Car car){
         if(car.getValue() < this.salary){
             System.out.println("udało się kupić za gotówkę iprzypisujemy samochód");
+            this.car = car;
         }
         else if((car.getValue()/12) < this.salary){
             System.out.println("udało się kupić na kredyt (no trudno) iprzypisujemy samochód");
+            this.car = car;
         }
         else{
             System.out.println("zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
         }
     }
-
+    public void setPhone(Phone phone){
+        this.phone = phone;
+    }
+    public Phone getPhone(){
+        return phone;
+    }
+    public void setAnimal(Animal animal){
+        this.animal = animal;
+    }
+    public Animal getAnimal(){
+        return animal;
+    }
     public String toString(){
         return firstName+" "+lastName+" "+Age;
     }

@@ -1,6 +1,8 @@
 package com.company.devices;
 
-abstract public class Device {
+import com.company.Human;
+
+abstract public class Device{
 
     public final String producer;
     public final String model;
@@ -20,4 +22,5 @@ abstract public class Device {
                 '}';
     }
     abstract public void turnOn();
+    
 }

@@ -1,12 +1,15 @@
 package com.company;
 
+import com.company.devices.selleable;
+
 import java.io.File;
 
-public class Animal {
+public class Animal implements selleable {
     final String species;
     public String name;
     private Double weight;
     File pic;
+    public Human seller;
 
     static public final Double DEFAULT_ANIMAL_WEIGHT = 1.0;
 
@@ -49,4 +52,26 @@ public class Animal {
     public String toString(){//overriding the toString() method
         return species+" "+name+" "+weight;
     }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.getAnimal()!=null) {
+            if (buyer.cash >= price) {
+                buyer.animal = seller.animal;
+                seller.animal = null;
+                buyer.cash = buyer.cash - price;
+                seller.cash = seller.cash + price;
+                System.out.println("Zwierzak sprzedany, zmiana wlasciciela, hajs zabrany");
+            }
+            else
+            {
+                System.out.println("Nie stać cie  na zwierzaka hm");
+            }
+        }
+        else
+        {
+            System.out.println("Nie masz zwierzaka");
+        }
+    }
+
 }

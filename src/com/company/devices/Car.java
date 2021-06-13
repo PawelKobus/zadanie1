@@ -1,6 +1,8 @@
 package com.company.devices;
 
-public class Car extends Device{
+import com.company.Human;
+
+public class Car extends Device implements selleable{
     final String producer;
 
     public String getProducer() {
@@ -54,5 +56,26 @@ public class Car extends Device{
         System.out.println("Kręcę");
         System.out.println("Odpalił");
 
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.getAnimal()!=null) {
+            if (buyer.cash >= price) {
+                buyer.car = seller.car;
+                seller.car = null;
+                buyer.cash = buyer.cash - price;
+                seller.cash = seller.cash + price;
+                System.out.println("Samochod sprzedany, zmiana wlasciciela, hajs zabrany");
+            }
+            else
+            {
+                System.out.println("Nie stać cie  na Samochod hm");
+            }
+        }
+        else
+        {
+            System.out.println("Nie masz Samochodu");
+        }
     }
 }
