@@ -56,7 +56,6 @@ public class Main{
         System.out.println(me.getCar());
         System.out.println(me.getAnimal());
         System.out.println("\n");
-
         //sprzedanie zwierzaka
         System.out.println("hajs kupujacego: "+someone.cash);
         System.out.println("moj hajs: "+me.cash);
