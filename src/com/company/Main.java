@@ -23,8 +23,18 @@ public class Main{
         };
         dog.name = "Szarik";
 
-        Car audi = new Car("Audi","A3",200623.0,1999);
-        Car fiat = new Car("Fiat","126p",10623.0,1979);
+        Car audi = new Car("Audi","A3",200623.0,1999){
+            @Override
+            public void refuel() {
+                fuel = 100.0;
+            }
+        };
+        Car fiat = new Car("Fiat","126p",10623.0,1979){
+            @Override
+            public void refuel() {
+                fuel = 100.0;
+            }
+        };
         Phone iphone = new Phone("IPhone","X", 2019, "IOS 15", 6.0);
         Phone xiaomi = new Phone("Xiaomi","11", 2018, "Android 10", 6.2);
 
@@ -65,6 +75,8 @@ public class Main{
         System.out.println("zwierze kupujacego: "+someone.getAnimal());
         System.out.println("zwierze moje: "+me.getAnimal());
 
+        iphone.installAnApp("facebook");
+        iphone.installAnApp("signal", "1.2.3");
 
 
     }

@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public class Car extends Device implements salleable {
+public abstract class Car extends Device implements salleable {
     final String producer;
 
     public String getProducer() {
@@ -20,6 +20,7 @@ public class Car extends Device implements salleable {
     final String model;
     private Double value;
     Integer ID;
+    public Double fuel;
 
     public Car(String producer, String model, Double value, Integer yearOfProduction) {
         super(producer, model, yearOfProduction);
@@ -77,4 +78,5 @@ public class Car extends Device implements salleable {
             System.out.println("Nie masz Samochodu");
         }
     }
+    public abstract void refuel();
 }
