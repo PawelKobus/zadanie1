@@ -16,6 +16,7 @@ public class Main {
         me.setSalary(2000.0);
         Car audi = new Car("Audi","A3",200623.0,1999);
         me.setCar(audi);
+        Phone iphone = new Phone("IPhone","X", 2019, "IOS 15", 6.0);
         System.out.println((me.firstName));
         System.out.println((me.lastName));
         System.out.println((me.Age));
@@ -33,6 +34,8 @@ public class Main {
         dog.takeForAWalk();
         dog.takeForAWalk();
         System.out.println(audi.toString());
+        audi.turnOn();
+        iphone.turnOn();
 
 
 

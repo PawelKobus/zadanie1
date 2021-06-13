@@ -16,6 +16,8 @@ public class Phone extends Device{
 
     @Override
     public void turnOn() {
-
+        System.out.println("Włączam telefon");
+        System.out.println("Czekam");
+        System.out.println("Działczy");
     }
 }

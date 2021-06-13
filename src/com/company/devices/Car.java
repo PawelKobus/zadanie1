@@ -49,6 +49,10 @@ public class Car extends Device{
 
     @Override
     public void turnOn() {
+        System.out.println("Otwieram samochod");
+        System.out.println("Kluczyk w stacyjkę");
+        System.out.println("Kręcę");
+        System.out.println("Odpalił");
 
     }
 }
