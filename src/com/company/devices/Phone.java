@@ -1,10 +1,11 @@
-package com.company;
+package com.company.devices;
 
 public class Phone {
-    final String producer;
+    public final String producer;
     final String model;
     final String operationSystem;
     final Double screenSize;
+
 
     public Phone(String producer, String model, String operationSystem, Double screenSize) {
         this.producer = producer;

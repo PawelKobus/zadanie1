@@ -1,6 +1,4 @@
-package com.company;
-
-import java.sql.SQLOutput;
+package com.company.devices;
 
 public class Car {
     final String producer;
