@@ -57,7 +57,6 @@ public class Car extends Device implements selleable{
         System.out.println("Odpalił");
 
     }
-
     @Override
     public void sell(Human seller, Human buyer, Double price) {
         if(seller.getAnimal()!=null) {

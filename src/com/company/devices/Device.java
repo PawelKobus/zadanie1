@@ -22,5 +22,5 @@ abstract public class Device{
                 '}';
     }
     abstract public void turnOn();
-    
+
 }
