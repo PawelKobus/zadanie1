@@ -8,7 +8,8 @@ import com.company.devices.Phone;
 
 public class Main{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Human me = new Human(200000.0);
         me.setSalary(200000.0);
         Double mySalary = me.getSalary();

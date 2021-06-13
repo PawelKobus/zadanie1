@@ -2,7 +2,8 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public abstract class Car extends Device implements salleable {
+public abstract class Car extends Device implements salleable
+{
     final String producer;
 
     public String getProducer() {

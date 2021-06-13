@@ -5,7 +5,8 @@ import com.company.devices.Phone;
 
 import java.util.Date;
 
-public class Human {
+public class Human
+{
     public String firstName;
     public String lastName;
     public Integer Age;
