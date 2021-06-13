@@ -1,8 +1,8 @@
 package com.company.devices;
 
-import com.company.Human;
+import com.company.creatures.Human;
 
-public class Car extends Device implements selleable{
+public class Car extends Device implements salleable {
     final String producer;
 
     public String getProducer() {

@@ -1,7 +1,7 @@
 package com.company.devices;
 
-import com.company.Human;
+import com.company.creatures.Human;
 
-public interface selleable {
+public interface salleable {
     public void sell(Human seller, Human buyer, Double price);
 }

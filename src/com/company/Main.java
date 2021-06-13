@@ -1,8 +1,9 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Phone;
-import com.company.devices.selleable;
 
 
 public class Main{
@@ -14,7 +15,12 @@ public class Main{
         Human someone = new Human(200000.0);
         someone.cash = 1000.0;
         me.cash = 10000.0;
-        Animal dog = new Animal("Canis familiaris");
+        Animal dog = new Animal("Canis familiaris"){
+            @Override
+            public void feed(Double foodWeight) {
+
+            }
+        };
         dog.name = "Szarik";
 
         Car audi = new Car("Audi","A3",200623.0,1999);
@@ -40,15 +46,6 @@ public class Main{
         System.out.println(dog);
         System.out.println(me);
 
-        dog.feed();
-        dog.takeForAWalk();
-        dog.feed();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.feed();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        System.out.println(audi.toString());
 
         audi.turnOn();
         iphone.turnOn();
@@ -56,6 +53,7 @@ public class Main{
         System.out.println(me.getCar());
         System.out.println(me.getAnimal());
         System.out.println("\n");
+
         //sprzedanie zwierzaka
         System.out.println("hajs kupujacego: "+someone.cash);
         System.out.println("moj hajs: "+me.cash);

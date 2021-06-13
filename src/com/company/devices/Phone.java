@@ -1,10 +1,10 @@
 package com.company.devices;
 
 
-import com.company.Human;
+import com.company.creatures.Human;
 
 
-public class Phone extends Device implements selleable {
+public class Phone extends Device implements salleable {
     final String operationSystem;
     final Double screenSize;
     public Human owner;

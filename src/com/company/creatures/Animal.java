@@ -1,10 +1,10 @@
-package com.company;
+package com.company.creatures;
 
-import com.company.devices.selleable;
+import com.company.devices.salleable;
 
 import java.io.File;
 
-public class Animal implements selleable {
+public abstract class Animal implements Feedable, salleable{
     final String species;
     public String name;
     private Double weight;
@@ -13,7 +13,7 @@ public class Animal implements selleable {
 
     static public final Double DEFAULT_ANIMAL_WEIGHT = 1.0;
 
-    Animal(String species) {
+    public Animal(String species) {
         this.species = species;
 
         switch (this.species) {
@@ -72,6 +72,14 @@ public class Animal implements selleable {
         {
             System.out.println("Nie masz zwierzaka");
         }
+    }
+    public void FarmAnimal(){
+
+
+
+    }
+    public void Pet(){
+
     }
 
 }

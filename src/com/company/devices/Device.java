@@ -1,7 +1,5 @@
 package com.company.devices;
 
-import com.company.Human;
-
 abstract public class Device{
 
     public final String producer;

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.creatures;
 
 import com.company.devices.Car;
 import com.company.devices.Phone;
@@ -6,12 +6,12 @@ import com.company.devices.Phone;
 import java.util.Date;
 
 public class Human {
-    String firstName;
-    String lastName;
-    Integer Age;
+    public String firstName;
+    public String lastName;
+    public Integer Age;
     String sex;
     public Phone phone;
-    Animal animal;
+    public Animal animal;
     Animal pet;
     public Double cash;
     Human seller;
