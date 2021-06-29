@@ -2,6 +2,8 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
+import java.util.Arrays;
+
 public abstract class Car extends Device implements salleable
 {
     final String producer;
@@ -23,13 +25,15 @@ public abstract class Car extends Device implements salleable
     Integer ID;
     public Double fuel;
 
-    public Car(String producer, String model, Double value, Integer yearOfProduction) {
-        super(producer, model, yearOfProduction);
+    public Car(String producer, String model, Double value, Integer productionYear) {
+        super(producer, model, productionYear);
         this.producer = producer;
         this.model = model;
         this.setValue(value);
     }
-
+    public Integer getProductionYear(){
+        return productionYear;
+    }
     public Double getValue() {
         return value;
     }
@@ -60,24 +64,23 @@ public abstract class Car extends Device implements salleable
 
     }
     @Override
-    public void sell(Human seller, Human buyer, Double price) {
-        if(seller.getAnimal()!=null) {
-            if (buyer.cash >= price) {
-                buyer.car = seller.car;
-                seller.car = null;
-                buyer.cash = buyer.cash - price;
-                seller.cash = seller.cash + price;
-                System.out.println("Samochod sprzedany, zmiana wlasciciela, hajs zabrany");
-            }
-            else
-            {
-                System.out.println("Nie stać cie  na Samochod hm");
-            }
+    public void sell(Human seller, Human buyer, Double price, Integer parkNumber) throws Exception{
+        if(!seller.haveCar(this)){
+            throw new Exception("Nie ma auta");
         }
-        else
+        if(!buyer.haveFreeSpace(this))
         {
-            System.out.println("Nie masz Samochodu");
+            throw new Exception("Brak miejsca");
         }
+        if(buyer.getCash() <price ){
+            throw new Exception("Brak pieniedzy");
+        }
+        seller.removeCar(this);
+        buyer.addCar(this);
+        seller.setCash(seller.getCash()+price);
+        buyer.setCash(buyer.getCash()-price);
+        System.out.println("Sprzedano samochod");
     }
     public abstract void refuel();
+
 }

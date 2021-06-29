@@ -54,6 +54,12 @@ public class Phone extends Device implements salleable {
             System.out.println("Nie masz Telefonu");
         }
     }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price, Integer parkNumber) throws Exception {
+
+    }
+
     public void installAnApp(String appName) {
         this.installAnApp(appName, DEFAULT_APP_VERSION);
     }

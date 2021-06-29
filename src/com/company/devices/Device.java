@@ -6,6 +6,7 @@ abstract public class Device
     public final String producer;
     public final String model;
     public final Integer productionYear;
+    public static Double value = 0.0;
 
     public Device(String producer, String model, Integer productionYear) {
         this.producer = producer;
@@ -20,6 +21,8 @@ abstract public class Device
                 ", productionYear=" + productionYear +
                 '}';
     }
-    abstract public void turnOn();
+    public void turnOn(){
+        System.out.println("odpalony");
+    }
 
 }

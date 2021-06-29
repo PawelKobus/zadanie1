@@ -5,6 +5,9 @@ import com.company.creatures.Human;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 public class Main{
 
@@ -18,6 +21,11 @@ public class Main{
         me.cash = 10000.0;
         Animal dog = new Animal("Canis familiaris"){
             @Override
+            public void sell(Human seller, Human buyer, Double price, Integer parkNumber) throws Exception {
+
+            }
+
+            @Override
             public void feed(Double foodWeight) {
 
             }
@@ -26,11 +34,21 @@ public class Main{
 
         Car audi = new Car("Audi","A3",200623.0,1999){
             @Override
+            public void sell(Human seller, Human buyer, Double price) {
+
+            }
+
+            @Override
             public void refuel() {
                 fuel = 100.0;
             }
         };
         Car fiat = new Car("Fiat","126p",10623.0,1979){
+            @Override
+            public void sell(Human seller, Human buyer, Double price) {
+
+            }
+
             @Override
             public void refuel() {
                 fuel = 100.0;
@@ -39,7 +57,7 @@ public class Main{
         Phone iphone = new Phone("IPhone","X", 2019, "IOS 15", 6.0);
         Phone xiaomi = new Phone("Xiaomi","11", 2018, "Android 10", 6.2);
 
-        me.setCar(audi);
+        me.setCar(audi,0);
         me.setPhone(iphone);
         me.setAnimal(dog);
 
@@ -52,7 +70,7 @@ public class Main{
         System.out.println((me.firstName));
         System.out.println((me.lastName));
         System.out.println((me.Age));
-        System.out.println((me.getCar()));
+        System.out.println((me.getCar(0)));
 
         System.out.println(dog);
         System.out.println(me);
@@ -61,7 +79,6 @@ public class Main{
         audi.turnOn();
         iphone.turnOn();
         System.out.println(me.getPhone());
-        System.out.println(me.getCar());
         System.out.println(me.getAnimal());
         System.out.println("\n");
 
@@ -79,6 +96,20 @@ public class Main{
         iphone.installAnApp("facebook");
         iphone.installAnApp("signal", "1.2.3");
 
+
+        String[] names = {"Kacper","Marian","Janusz","Karolina"};
+
+        Double[] numbers = new Double[5];
+        numbers[0]=231.2;
+        numbers[1]=162.5;
+        numbers[2]=377.3;
+        numbers[3]=160.1;
+        numbers[4]=863.2;
+        Arrays.sort(numbers);
+        for(Double n : numbers)
+        {
+            System.out.println(n);
+        }
 
     }
 }
